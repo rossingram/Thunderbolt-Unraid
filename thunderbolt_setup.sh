@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # Navigate to the Thunderbolt devices directory
 echo "Navigating to Thunderbolt devices directory..."
 cd /sys/bus/thunderbolt/devices/domain0/0-0/
@@ -29,6 +28,7 @@ fi
 echo "Rescanning PCI devices..."
 echo 1 > /sys/bus/pci/rescan
 cd ..
+echo 1 > /sys/bus/pci/rescan
 
 echo "Script execution completed."
 
